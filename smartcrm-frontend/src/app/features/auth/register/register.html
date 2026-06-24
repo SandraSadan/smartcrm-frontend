@@ -1,1 +1,74 @@
-<h1>Register</h1>
+<h2>Create Your Account</h2>
+<p>Register for SmartCRM</p>
+
+<form [formGroup]="registerForm" (ngSubmit)="submit()">
+
+    <mat-form-field appearance="outline" class="full">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName">
+        @if (registerForm.get('firstName')?.hasError('required')) {
+        <mat-error>
+            First name required!
+        </mat-error>
+        }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lastName">
+        @if (registerForm.get('lastName')?.hasError('required')) {
+        <mat-error>
+            Last name required!
+        </mat-error>
+        }
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="full">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email">
+
+        @if (registerForm.get('email')?.hasError('required')) {
+        <mat-error>Email is required</mat-error>
+        }
+
+        @if (registerForm.get('email')?.hasError('email')) {
+        <mat-error>Enter a valid email</mat-error>
+        }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password">
+
+        @if (registerForm.get('password')?.hasError('required')) {
+        <mat-error>Password is required</mat-error>
+        }
+        @if (registerForm.get('password')?.hasError('minLength')) {
+        <mat-error>Minimum 6 characters required</mat-error>
+        }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full">
+        <mat-label>Confirm Password</mat-label>
+        <input matInput type="password" formControlName="confirmPassword">
+
+        @if (registerForm.get('confirmPassword')?.touched &&
+        registerForm.get('confirmPassword')?.errors?.['passwordMismatch']) {
+        <mat-error>
+            Passwords do not match
+        </mat-error>
+        }
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" class="full">
+        Register
+    </button>
+</form>
+
+<div class="auth-footer">
+    <p>
+        Already have an account?
+        <a routerLink="/login">Login</a>
+    </p>
+</div>
