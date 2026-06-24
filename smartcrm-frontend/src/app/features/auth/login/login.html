@@ -11,9 +11,17 @@
         <input matInput type="password" formControlName="password">
     </mat-form-field>
 
-    <mat-checkbox>Remember me</mat-checkbox>
+    <!-- Optional -->
+    <!-- <mat-checkbox>Remember me</mat-checkbox> -->
 
     <button mat-raised-button color="primary" class="full">
         Login
     </button>
 </form>
+
+<div class="auth-footer">
+    <p>
+        Don't have an account?
+        <a routerLink="/register">Create Account</a>
+    </p>
+</div>
