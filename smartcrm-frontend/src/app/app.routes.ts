@@ -24,10 +24,17 @@ export const routes: Routes = [
     ],
   },
   {
-    path: 'dashboard',
+    path: '',
     loadComponent: () =>
-      import('./features/dashboard/dashboard/dashboard').then(
-        (m) => m.Dashboard,
-      ),
+      import('./layouts/main-layout/main-layout').then((m) => m.MainLayout),
+    children: [
+      {
+        path: 'dashboard',
+        loadComponent: () =>
+          import('./features/dashboard/dashboard/dashboard').then(
+            (m) => m.Dashboard,
+          ),
+      },
+    ],
   },
 ];
