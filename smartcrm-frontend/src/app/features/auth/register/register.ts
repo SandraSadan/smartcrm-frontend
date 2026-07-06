@@ -5,10 +5,11 @@ import {
   ReactiveFormsModule,
   AbstractControl,
 } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { Auth } from '../../../core/services/auth';
 
 @Component({
   selector: 'app-register',
@@ -24,6 +25,11 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './register.scss',
 })
 export class Register implements OnInit {
+  constructor(
+    private authService: Auth,
+    private router: Router,
+  ) {}
+
   private fb = inject(FormBuilder);
   registerForm = this.fb.group(
     {
@@ -63,7 +69,20 @@ export class Register implements OnInit {
 
   submit() {
     if (this.registerForm.valid) {
-      console.log(this.registerForm.value);
+      if (this.registerForm.invalid) {
+        return;
+      }
+
+      this.authService.register({
+        id: crypto.randomUUID(),
+        firstName: this.registerForm.value.firstName!,
+        lastName: this.registerForm.value.lastName!,
+        email: this.registerForm.value.email!,
+      });
+
+      this.router.navigate(['/login']);
+      // temporarily added
+      console.log('User Registered');
     }
   }
 }

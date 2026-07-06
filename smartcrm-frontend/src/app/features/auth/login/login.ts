@@ -4,7 +4,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { Auth } from '../../../core/services/auth';
 
 @Component({
   selector: 'app-login',
@@ -21,6 +22,11 @@ import { RouterLink } from '@angular/router';
   styleUrl: './login.scss',
 })
 export class Login {
+  constructor(
+    private authService: Auth,
+    private router: Router,
+  ) {}
+
   private fb = inject(FormBuilder);
 
   loginForm = this.fb.group({
@@ -30,5 +36,20 @@ export class Login {
 
   submit() {
     console.log(this.loginForm.value);
+    if (this.loginForm.invalid) {
+      return;
+    }
+
+    const success = this.authService.login(
+      this.loginForm.value.email!,
+      this.loginForm.value.password!,
+    );
+
+    if (success) {
+      console.log('Login Success');
+      this.router.navigate(['/dashboard']);
+    } else {
+      console.log('Invalid Credentials');
+    }
   }
 }
