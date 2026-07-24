@@ -25,10 +25,9 @@ import { Auth } from '../../../core/services/auth';
   styleUrl: './register.scss',
 })
 export class Register implements OnInit {
-  constructor(
-    private authService: Auth,
-    private router: Router,
-  ) {}
+  private authService = inject(Auth);
+  private router = inject(Router);
+
 
   private fb = inject(FormBuilder);
   registerForm = this.fb.group(

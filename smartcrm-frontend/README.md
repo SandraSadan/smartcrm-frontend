@@ -1,59 +1,123 @@
-# SmartcrmFrontend
+# 🚀 SmartCRM Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+> A modern Customer Relationship Management (CRM) frontend built with **Angular 20**, following enterprise-grade architecture and modern Angular best practices.
+> 🚧 **Project Status:** Authentication Module Completed | Dashboard Module In Progress
 
-## Development server
+---
 
-To start a local development server, run:
+## 📖 Overview
+
+SmartCRM Frontend is a responsive Angular application being developed to manage customers, leads, tasks, and business activities through a modern dashboard interface. This project serves as a portfolio application demonstrating scalable Angular architecture, reusable components, and clean coding practices.
+
+---
+
+## 🛠 Tech Stack
+
+* Angular 20 (Standalone Components)
+* TypeScript
+* Angular Material
+* SCSS
+* RxJS
+* Angular Router
+* Reactive Forms
+* Git & GitHub
+
+---
+
+## ✅ Features Implemented
+
+* Standalone Angular architecture
+* Feature-based folder structure
+* Authentication (Login & Registration)
+* Reactive Forms with custom validation
+* Authentication service
+* Auth & Main layouts
+* Lazy-loaded routing
+* Responsive UI using Angular Material
+
+---
+
+## 🚀 Planned Features
+
+* Dashboard & Analytics
+* Customer Management
+* Lead Management
+* Task Management
+* Route Guards & HTTP Interceptors
+* REST API Integration (NestJS)
+* Search, Filtering & Pagination
+* Role-Based Access Control (RBAC)
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── core/
+├── features/
+├── layouts/
+├── shared/
+└── assets/
+```
+
+---
+
+## ⚙️ Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/<your-github-username>/smartcrm-frontend.git
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the application:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open your browser and navigate to:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```text
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 📸 Screenshots
 
-## Building
+Screenshots will be added as development progresses.
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 📌 Roadmap
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+* [x] Project Setup
+* [x] Authentication Module
+* [x] Application Layout
+* [ ] Dashboard
+* [ ] Customer Module
+* [ ] Lead Module
+* [ ] Task Module
+* [ ] API Integration
+* [ ] Charts & Reports
+* [ ] Deployment
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 🔗 Related Repository
 
-```bash
-ng test
-```
+**Backend (NestJS):** Coming Soon
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 👨‍💻 Author
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Sandra Sadan

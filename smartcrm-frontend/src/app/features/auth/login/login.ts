@@ -22,11 +22,8 @@ import { Auth } from '../../../core/services/auth';
   styleUrl: './login.scss',
 })
 export class Login {
-  constructor(
-    private authService: Auth,
-    private router: Router,
-  ) {}
-
+  private authService = inject(Auth);
+  private router = inject(Router);
   private fb = inject(FormBuilder);
 
   loginForm = this.fb.group({
@@ -35,7 +32,6 @@ export class Login {
   });
 
   submit() {
-    console.log(this.loginForm.value);
     if (this.loginForm.invalid) {
       return;
     }
