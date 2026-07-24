@@ -29,7 +29,7 @@
         <input matInput formControlName="email">
 
         @if (registerForm.get('email')?.hasError('required')) {
-        <mat-error>Email is required</mat-error>
+        <mat-error>Email is required!</mat-error>
         }
 
         @if (registerForm.get('email')?.hasError('email')) {
@@ -42,10 +42,10 @@
         <input matInput type="password" formControlName="password">
 
         @if (registerForm.get('password')?.hasError('required')) {
-        <mat-error>Password is required</mat-error>
+        <mat-error>Password is required!</mat-error>
         }
         @if (registerForm.get('password')?.hasError('minLength')) {
-        <mat-error>Minimum 6 characters required</mat-error>
+        <mat-error>Minimum 6 characters required!</mat-error>
         }
     </mat-form-field>
 
