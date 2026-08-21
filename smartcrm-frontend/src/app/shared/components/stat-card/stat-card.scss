@@ -1,0 +1,56 @@
+.stat-card {
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: none;
+    border: 1px solid #e5e7eb;
+    transition: all 0.25s ease;
+    cursor: default;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icon-container {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+
+    background: #eef2ff;
+}
+
+.icon-container mat-icon {
+    color: #3f51b5;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.card-content {
+    margin-top: 24px;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.card-content h2 {
+    margin-top: 10px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #111827;
+}

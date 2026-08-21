@@ -1,1 +1,12 @@
-<h1>Dashboard</h1>
+<section class="dashboard">
+    <div class="welcome-section">
+        <h1>Welcome Back, John Doe 👋</h1>
+        <p>Here's an overview of your CRM.</p>
+    </div>
+    <div class="stats-grid">
+        @for(stat of stats; track stat.title) {
+        <app-stat-card [title]="stat.title" [statValue]="stat.statValue" [icon]="stat.icon">
+        </app-stat-card>
+        }
+    </div>
+</section>
