@@ -33,13 +33,15 @@ SmartCRM Frontend is a responsive Angular application being developed to manage 
 * Authentication service
 * Auth & Main layouts
 * Lazy-loaded routing
-* Responsive UI using Angular Material
+* Dynamic sidebar navigation
+* Dashboard overview
+* Reusable statistics card component
+* Responsive dashboard layout
 
 ---
 
 ## 🚀 Planned Features
 
-* Dashboard & Analytics
 * Customer Management
 * Lead Management
 * Task Management
@@ -47,6 +49,7 @@ SmartCRM Frontend is a responsive Angular application being developed to manage 
 * REST API Integration (NestJS)
 * Search, Filtering & Pagination
 * Role-Based Access Control (RBAC)
+* Charts & Reports
 
 ---
 
@@ -102,7 +105,8 @@ Screenshots will be added as development progresses.
 * [x] Project Setup
 * [x] Authentication Module
 * [x] Application Layout
-* [ ] Dashboard
+* [x] Dashboard Foundation
+* [ ] Dashboard Completion
 * [ ] Customer Module
 * [ ] Lead Module
 * [ ] Task Module
